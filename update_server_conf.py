@@ -6,13 +6,17 @@ Task: You are to update the "Max Connections" key in the server.conf file. Write
 
 ---
 def update_server_config(file_path, key, value):
-    with open(file_path, "r") as file: #"open" is an in-built funtion to read files and it starts with the statement "with". "r" denotes read mode
-        lines = file.readlines()  #convert the content of the file once read into a list # "readlines" is an in-built function for this task.
+    #"open" is an in-built funtion to read files and it starts with the statement "with". "r" denotes read mode
+    with open(file_path, "r") as file: 
+        #After saving the file as a variable, convert the content of the file once read into a list # "readlines" is an in-built function for this task.
+        lines = file.readlines()  
 
     with open (file_path, "w") as file: #open file to edit content ("write") in it
         for line in lines:
-            if key in line: #(the "key" variable here will represent the key for the key/value pair in the server.conf file you want to change)
-                file.write(key + "=" + value + "\n") # "\n" represents the new value you want to enter in the key/value pair.
+            #(the "key" variable here will represent the key for the key/value pair in the server.conf file you want to change)
+            if key in line: 
+                # "\n" represents the new value you want to enter in the key/value pair.
+                file.write(key + "=" + value + "\n") 
             else:
                 file.write(line) 
  
