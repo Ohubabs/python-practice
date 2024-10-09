@@ -22,3 +22,14 @@ response = requests.get(url)
 pull_requests = response.json()
 for i in range(len(pull_requests)):
     print(pull_requests[i]["user"]["login"]) # This will return all the names in the pull request
+
+---
+import requests
+
+url = 'https://api.github.com/repos/LandmakTechnology/spring-boot-docker/pulls'
+
+response = requests.get(url)
+
+pull_requests = response.json()
+for i in range(len(pull_requests)):
+    print(pull_requests[i]["body"]) # This will return all the body messages for the pull requests
