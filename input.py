@@ -1,5 +1,5 @@
 def main():
-    folder_paths = input("Enter a list of folder paths separated by spaces: ").split()
+    folder_paths = input("Enter a list of folder paths separated by spaces: ").split() #this will convert the string inputs into an ordered list
     print(folder_paths)
 
     # Print elements in the list
