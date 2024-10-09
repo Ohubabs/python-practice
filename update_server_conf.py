@@ -13,7 +13,7 @@ def update_server_config(file_path, key, value):
 
     with open (file_path, "w") as file: #open file to edit content ("write") in it
         for line in lines:
-            #(the "key" variable here will represent the key for the key/value pair in the server.conf file you want to change)
+            #if the key enetered exists in the file execute this code #(the "key" variable here will represent the key for the key/value pair in the server.conf file you want to change)
             if key in line: 
                 # "\n" represents the new value you want to enter in the key/value pair.
                 file.write(key + "=" + value + "\n") 
